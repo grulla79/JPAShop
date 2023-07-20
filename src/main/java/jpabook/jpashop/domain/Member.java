@@ -25,5 +25,5 @@ public class Member {
         연관관계 주인이 아님을 선언 -> order 테이블에 있는 Member 필드에 의해 매칭 됨을 알림
      */
     @OneToMany(mappedBy = "member")
-    private ArrayList<Order> orders = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>();
 }
