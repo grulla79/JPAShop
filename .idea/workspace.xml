@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6b65ce6-c595-4c3f-96de-20178f31ea4e" name="Changes" comment="웹계층 개발 - 홈화면과 레이아웃">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/controller/MemberController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/controller/MemberForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/members/createMemberForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/members/memberList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e6b65ce6-c595-4c3f-96de-20178f31ea4e" name="Changes" comment="웹계층 개발 - 회원가입/회원목록조회 추가">
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/controller/BookForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/controller/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/items/createItemForm.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +202,7 @@
       <workItem from="1689859490733" duration="4933000" />
       <workItem from="1689937266784" duration="6681000" />
       <workItem from="1690118916572" duration="22000" />
-      <workItem from="1690217338594" duration="1571000" />
+      <workItem from="1690217338594" duration="2795000" />
     </task>
     <task id="LOCAL-00001" summary="도메인 분석 설계 - 엔티티 클래스 개발 2">
       <created>1689538609724</created>
@@ -237,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689947780496</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="웹계층 개발 - 회원가입/회원목록조회 추가">
+      <option name="closed" value="true" />
+      <created>1690219143772</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690219143772</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +254,8 @@
     <MESSAGE value="주문 도메인 개발" />
     <MESSAGE value="주문 도메인 개발 마무리" />
     <MESSAGE value="웹계층 개발 - 홈화면과 레이아웃" />
-    <option name="LAST_COMMIT_MESSAGE" value="웹계층 개발 - 홈화면과 레이아웃" />
+    <MESSAGE value="웹계층 개발 - 회원가입/회원목록조회 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="웹계층 개발 - 회원가입/회원목록조회 추가" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
