@@ -18,6 +18,7 @@ public class ItemRepository {
             em.persist(item);
         }else {
             //이미 아이템이 존재하는 경우, 아이템의 값을 수정
+            //잘 사용하지 않는 방법
             em.merge(item);
         }
     }

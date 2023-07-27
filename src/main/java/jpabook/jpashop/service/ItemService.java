@@ -29,5 +29,18 @@ public class ItemService {
         return itemRepository.findOne(id);
     }
 
+    /**
+     * 변경감지와 병합 중 '변경감지'를 사용하여 값을 수정하는 것이
+     * 더 간편화고 정확하게 값을 수정할 수 있다.
+     */
 
+    @Transactional
+    public void updateItem(Long id, String name, int price, int stockQuantity)
+    {
+        Item item = itemRepository.findOne(id);
+        item.setName(name);
+        item.setPrice(price);
+        item.setStockQuantity(stockQuantity);
+    }
 }
+
