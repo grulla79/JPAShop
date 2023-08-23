@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6b65ce6-c595-4c3f-96de-20178f31ea4e" name="Changes" comment="웹계층 개발 - 상품등록/상품조회 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/items/updateItemForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/order/orderForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/order/orderList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/ItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/service/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/service/OrderService.java" afterDir="false" />
-    </list>
+    <list default="true" id="e6b65ce6-c595-4c3f-96de-20178f31ea4e" name="Changes" comment="웹계층 개발 마무리" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,7 +199,7 @@
       <workItem from="1689937266784" duration="6681000" />
       <workItem from="1690118916572" duration="22000" />
       <workItem from="1690217338594" duration="3124000" />
-      <workItem from="1690444726094" duration="5505000" />
+      <workItem from="1690444726094" duration="5851000" />
     </task>
     <task id="LOCAL-00001" summary="도메인 분석 설계 - 엔티티 클래스 개발 2">
       <created>1689538609724</created>
@@ -260,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690220416976</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="웹계층 개발 마무리">
+      <option name="closed" value="true" />
+      <created>1690450543590</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690450543590</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +269,8 @@
     <MESSAGE value="웹계층 개발 - 홈화면과 레이아웃" />
     <MESSAGE value="웹계층 개발 - 회원가입/회원목록조회 추가" />
     <MESSAGE value="웹계층 개발 - 상품등록/상품조회 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="웹계층 개발 - 상품등록/상품조회 추가" />
+    <MESSAGE value="웹계층 개발 마무리" />
+    <option name="LAST_COMMIT_MESSAGE" value="웹계층 개발 마무리" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
