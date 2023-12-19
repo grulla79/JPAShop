@@ -2,12 +2,15 @@ package jpabook.jpashop.controller;
 
 import jpabook.jpashop.domain.Category;
 import jpabook.jpashop.domain.Item.Item;
+import jpabook.jpashop.domain.Review;
+import jpabook.jpashop.repository.OrderSearch;
 import jpabook.jpashop.service.CategoryService;
 import jpabook.jpashop.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -49,6 +52,7 @@ public class ItemController {
     @GetMapping("/items")
     public String list(Model model) {
         List<Item> items = itemService.findItems();
+
         model.addAttribute("items", items);
         return "items/itemList";
     }
@@ -57,11 +61,13 @@ public class ItemController {
     public String showItem(@PathVariable("itemId") Long itemId, Model model) {
 
         Item item = itemService.findOne(itemId);
+        List<Review> review = itemService.findReview(itemId);
+        log.info(String.valueOf(review.size()));
 
         model.addAttribute("form", item);
+        model.addAttribute("reviews", review);
 
         return "items/itemInfo";
-
     }
 
 
@@ -98,4 +104,27 @@ public class ItemController {
 
     }
 
+    @GetMapping("items/{itemId}/review")
+    public String createReviewForm(@PathVariable("itemId") Long itemId, Model model) {
+        Item item = itemService.findOne(itemId);
+
+        Review r = new Review();
+        r.setId(itemId);
+        model.addAttribute("form", r);
+        model.addAttribute("item", item);
+        return "items/reviewForm";
+
+    }
+
+    @PostMapping("items/{itemId}/review")
+    public String createReview(@PathVariable("itemId") Long itemId, @ModelAttribute("form") Review form) {
+        Review r = new Review();
+        r.setItem_id(itemId);
+        r.setPoint(form.getPoint());
+        r.setMemo(form.getMemo());
+
+        itemService.savedReview(r);
+
+        return "redirect:/items/{itemId}";
+    }
 }

@@ -1204,305 +1204,345 @@ webdb|schema||webuser||grant option|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="323" parent="308" name="category_id">
+    <table id="323" parent="293" name="review">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="324" parent="293" name="review_seq">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="325" parent="308" name="category_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="324" parent="308" name="name">
+    <column id="326" parent="308" name="name">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <index id="325" parent="308" name="PRIMARY">
+    <index id="327" parent="308" name="PRIMARY">
       <ColNames>category_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="326" parent="308" name="PRIMARY">
+    <key id="328" parent="308" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="327" parent="309" name="next_val">
+    <column id="329" parent="309" name="next_val">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="328" parent="310" name="delivery_id">
+    <column id="330" parent="310" name="delivery_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="329" parent="310" name="city">
+    <column id="331" parent="310" name="city">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="330" parent="310" name="status">
+    <column id="332" parent="310" name="status">
       <DasType>enum(&apos;COMP&apos;, &apos;READY&apos;)|0e</DasType>
       <Position>3</Position>
     </column>
-    <column id="331" parent="310" name="street">
+    <column id="333" parent="310" name="street">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="332" parent="310" name="zipcode">
+    <column id="334" parent="310" name="zipcode">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>
-    <index id="333" parent="310" name="PRIMARY">
+    <index id="335" parent="310" name="PRIMARY">
       <ColNames>delivery_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="334" parent="310" name="PRIMARY">
+    <key id="336" parent="310" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="335" parent="311" name="next_val">
+    <column id="337" parent="311" name="next_val">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="336" parent="312" name="price">
+    <column id="338" parent="312" name="price">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="337" parent="312" name="stock_quantity">
+    <column id="339" parent="312" name="stock_quantity">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="338" parent="312" name="item_id">
+    <column id="340" parent="312" name="item_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="339" parent="312" name="dtype">
+    <column id="341" parent="312" name="dtype">
       <DasType>varchar(31)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="340" parent="312" name="category">
+    <column id="342" parent="312" name="category">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="341" parent="312" name="name">
+    <column id="343" parent="312" name="name">
       <DasType>varchar(255)|0s</DasType>
       <Position>6</Position>
     </column>
-    <index id="342" parent="312" name="PRIMARY">
+    <index id="344" parent="312" name="PRIMARY">
       <ColNames>item_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="343" parent="312" name="PRIMARY">
+    <key id="345" parent="312" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="344" parent="313" name="next_val">
+    <column id="346" parent="313" name="next_val">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="345" parent="314" name="member_id">
+    <column id="347" parent="314" name="member_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="346" parent="314" name="city">
+    <column id="348" parent="314" name="city">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="347" parent="314" name="name">
+    <column id="349" parent="314" name="name">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="348" parent="314" name="street">
+    <column id="350" parent="314" name="street">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="349" parent="314" name="zipcode">
+    <column id="351" parent="314" name="zipcode">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
     </column>
-    <index id="350" parent="314" name="PRIMARY">
+    <index id="352" parent="314" name="PRIMARY">
       <ColNames>member_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="351" parent="314" name="PRIMARY">
+    <key id="353" parent="314" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="352" parent="315" name="next_val">
+    <column id="354" parent="315" name="next_val">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="353" parent="316" name="count">
+    <column id="355" parent="316" name="count">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="354" parent="316" name="order_price">
+    <column id="356" parent="316" name="order_price">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="355" parent="316" name="item_id">
+    <column id="357" parent="316" name="item_id">
       <DasType>bigint|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="356" parent="316" name="order_id">
+    <column id="358" parent="316" name="order_id">
       <DasType>bigint|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="357" parent="316" name="order_item_id">
+    <column id="359" parent="316" name="order_item_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <foreign-key id="358" parent="316" name="FKija6hjjiit8dprnmvtvgdp6ru">
+    <foreign-key id="360" parent="316" name="FKija6hjjiit8dprnmvtvgdp6ru">
       <ColNames>item_id</ColNames>
       <RefColNames>item_id</RefColNames>
       <RefTableName>item</RefTableName>
     </foreign-key>
-    <foreign-key id="359" parent="316" name="FKt4dc2r9nbvbujrljv3e23iibt">
+    <foreign-key id="361" parent="316" name="FKt4dc2r9nbvbujrljv3e23iibt">
       <ColNames>order_id</ColNames>
       <RefColNames>order_id</RefColNames>
       <RefTableName>orders</RefTableName>
     </foreign-key>
-    <index id="360" parent="316" name="PRIMARY">
+    <index id="362" parent="316" name="PRIMARY">
       <ColNames>order_item_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="361" parent="316" name="FKija6hjjiit8dprnmvtvgdp6ru">
+    <index id="363" parent="316" name="FKija6hjjiit8dprnmvtvgdp6ru">
       <ColNames>item_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="362" parent="316" name="FKt4dc2r9nbvbujrljv3e23iibt">
+    <index id="364" parent="316" name="FKt4dc2r9nbvbujrljv3e23iibt">
       <ColNames>order_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="363" parent="316" name="PRIMARY">
+    <key id="365" parent="316" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="364" parent="317" name="next_val">
+    <column id="366" parent="317" name="next_val">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="365" parent="318" name="delivery_id">
+    <column id="367" parent="318" name="delivery_id">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="366" parent="318" name="member_id">
+    <column id="368" parent="318" name="member_id">
       <DasType>bigint|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="367" parent="318" name="order_date">
+    <column id="369" parent="318" name="order_date">
       <DasType>datetime(6)|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="368" parent="318" name="order_id">
+    <column id="370" parent="318" name="order_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="369" parent="318" name="status">
+    <column id="371" parent="318" name="status">
       <DasType>enum(&apos;CANCEL&apos;, &apos;ORDER&apos;)|0e</DasType>
       <Position>5</Position>
     </column>
-    <foreign-key id="370" parent="318" name="FKtkrur7wg4d8ax0pwgo0vmy20c">
+    <foreign-key id="372" parent="318" name="FKtkrur7wg4d8ax0pwgo0vmy20c">
       <ColNames>delivery_id</ColNames>
       <RefColNames>delivery_id</RefColNames>
       <RefTableName>delivery</RefTableName>
     </foreign-key>
-    <foreign-key id="371" parent="318" name="FKpktxwhj3x9m4gth5ff6bkqgeb">
+    <foreign-key id="373" parent="318" name="FKpktxwhj3x9m4gth5ff6bkqgeb">
       <ColNames>member_id</ColNames>
       <RefColNames>member_id</RefColNames>
       <RefTableName>member</RefTableName>
     </foreign-key>
-    <index id="372" parent="318" name="UK_9ct0l8xfeaiqruabcqjh1neui">
+    <index id="374" parent="318" name="UK_9ct0l8xfeaiqruabcqjh1neui">
       <ColNames>delivery_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="373" parent="318" name="PRIMARY">
+    <index id="375" parent="318" name="PRIMARY">
       <ColNames>order_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="374" parent="318" name="FKpktxwhj3x9m4gth5ff6bkqgeb">
+    <index id="376" parent="318" name="FKpktxwhj3x9m4gth5ff6bkqgeb">
       <ColNames>member_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="375" parent="318" name="PRIMARY">
+    <key id="377" parent="318" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="376" parent="318" name="UK_9ct0l8xfeaiqruabcqjh1neui">
+    <key id="378" parent="318" name="UK_9ct0l8xfeaiqruabcqjh1neui">
       <UnderlyingIndexName>UK_9ct0l8xfeaiqruabcqjh1neui</UnderlyingIndexName>
     </key>
-    <column id="377" parent="319" name="order_order_id">
+    <column id="379" parent="319" name="order_order_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="378" parent="319" name="order_items_order_item_id">
+    <column id="380" parent="319" name="order_items_order_item_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="379" parent="319" name="FK4a5vis32u4bexdg4xyjjc7o4j">
+    <foreign-key id="381" parent="319" name="FK4a5vis32u4bexdg4xyjjc7o4j">
       <ColNames>order_order_id</ColNames>
       <RefColNames>order_id</RefColNames>
       <RefTableName>orders</RefTableName>
     </foreign-key>
-    <foreign-key id="380" parent="319" name="FKrp82oqw4ek9fpmcf803wxvcta">
+    <foreign-key id="382" parent="319" name="FKrp82oqw4ek9fpmcf803wxvcta">
       <ColNames>order_items_order_item_id</ColNames>
       <RefColNames>order_item_id</RefColNames>
       <RefTableName>order_item</RefTableName>
     </foreign-key>
-    <index id="381" parent="319" name="UK_70a4sa284yptqe6d1xxson8kn">
+    <index id="383" parent="319" name="UK_70a4sa284yptqe6d1xxson8kn">
       <ColNames>order_items_order_item_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="382" parent="319" name="FK4a5vis32u4bexdg4xyjjc7o4j">
+    <index id="384" parent="319" name="FK4a5vis32u4bexdg4xyjjc7o4j">
       <ColNames>order_order_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="383" parent="319" name="UK_70a4sa284yptqe6d1xxson8kn">
+    <key id="385" parent="319" name="UK_70a4sa284yptqe6d1xxson8kn">
       <UnderlyingIndexName>UK_70a4sa284yptqe6d1xxson8kn</UnderlyingIndexName>
     </key>
-    <column id="384" parent="320" name="next_val">
+    <column id="386" parent="320" name="next_val">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>
-    <column id="385" parent="321" name="payment_id">
+    <column id="387" parent="321" name="payment_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="386" parent="321" name="payment">
+    <column id="388" parent="321" name="payment">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <index id="387" parent="321" name="PRIMARY">
+    <index id="389" parent="321" name="PRIMARY">
       <ColNames>payment_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="388" parent="321" name="PRIMARY">
+    <key id="390" parent="321" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="389" parent="322" name="next_val">
+    <column id="391" parent="322" name="next_val">
+      <DasType>bigint|0s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="392" parent="323" name="review_id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="393" parent="323" name="item_id">
+      <DasType>bigint|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="394" parent="323" name="memo">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="395" parent="323" name="point">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="396" parent="323" name="PRIMARY">
+      <ColNames>review_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="397" parent="323" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="398" parent="324" name="next_val">
       <DasType>bigint|0s</DasType>
       <Position>1</Position>
     </column>

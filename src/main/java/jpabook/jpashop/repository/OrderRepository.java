@@ -1,6 +1,7 @@
 package jpabook.jpashop.repository;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
 import jpabook.jpashop.domain.Order;
 import lombok.RequiredArgsConstructor;
@@ -21,6 +22,7 @@ public class OrderRepository {
     public Order findOne(Long id) {
         return em.find(Order.class, id);
     }
+
 
     public List<Order> findAll(OrderSearch orderSearch) {
 
@@ -70,6 +72,5 @@ public class OrderRepository {
         }
         return query.getResultList();
     }
-
 
 }

@@ -1,6 +1,7 @@
 package jpabook.jpashop.service;
 
 import jpabook.jpashop.domain.Item.Item;
+import jpabook.jpashop.domain.Review;
 import jpabook.jpashop.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,7 @@ public class ItemService {
     public void savedItem(Item item){
         itemRepository.save(item);
     }
+
 
     public List<Item> findItems(){
         return itemRepository.findAll();
@@ -47,6 +49,15 @@ public class ItemService {
     @Transactional
     public void deleteItem(Long id){
         itemRepository.deleteOne(id);
+    }
+
+    @Transactional//read only가 걸려 있으므로, 오버라이드를 걸어서 값이 저장될 수 있도록 함
+    public void savedReview(Review review){
+        itemRepository.saveReview(review);
+    }
+
+    public List<Review> findReview(Long id){
+        return itemRepository.findReview(id);
     }
 }
 

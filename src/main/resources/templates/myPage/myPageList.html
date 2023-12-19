@@ -3,7 +3,7 @@
 <head th:replace="fragments/header :: header"/>
 
 <head>
-    <link rel="stylesheet" href="./bootstrapt/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./bootstrapt/css/bootstrap.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -35,7 +35,7 @@
             <thead>
             <tr>
                 <th>#</th>
-                <!--th>회원명</th-->
+                <th>회원명</th>
                 <th>상품 이름</th>
                 <th>상품 주문가격</th>
                 <th>상품 주문수량</th>
@@ -47,66 +47,29 @@
             <tbody>
             <tr th:each="item : ${orders}">
                 <td th:text="${item.id}"></td>
-                <!--td th:text="${item.member.name}"></td-->
+                <td th:text="${item.member.name}"></td>
                 <td th:text="${item.orderItems[0].item.name}"></td>
                 <td th:text="${item.orderItems[0].orderPrice}"></td>
                 <td th:text="${item.orderItems[0].count}"></td>
                 <td th:text="${item.status}"></td>
-                <td th:text="${item.orderDate}"></td>
+                <!--td th:text="${item.orderDate}"></td-->
+                <td th:text="${#temporals.format(item.orderDate, 'yyyy-MM-dd')}"></td>
+
                 <td>
+                    <a href="#" th:href="@{/items/{id}/review (id=${item.id})}"
+                       class="btn btn-primary btn-sm" role="button">상품평 쓰기</a>
+
                     <a th:if="${item.status.name() == 'ORDER'}" href="#"
                        th:href="'javascript:cancel('+${item.id}+')'"
-                       class="btn btn-danger">CANCEL</a>
+                       class="btn btn-danger btn-sm">CANCEL</a>
                 </td>
             </tr>
             </tbody>
         </table>
-        <div th:replace="fragments/footer :: footer"/>
 
-        <p><a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            상품 주문
-            &raquo;</a></p>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="text-align: center">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">결제창</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <a href="ko.qr-code-generator.com/" border="0" style="cursor:default" rel="nofollow">
-                            <img src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fwww.naver.com%2F&chs=180x180&choe=UTF-8&chld=L|2">
-                        </a>
-
-                        <div class="form-group">
-                            <label for="payment"> </label>
-                            <select name="payment" id="payment" class="form-control">
-                                <option value="">결제 방식 선택</option>
-                                <option th:each="pay : ${payment}"
-                                        th:value="${pay.id}"
-                                        th:text="${pay.payment}"/>
-                            </select>
-                        </div>
-
-                        <p><br>
-                            <b>결제를 완료하였으면 '닫기' 버튼을 눌러주십시오.</b>
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-
-
-                        <button type="button" class="btn btn-secondary" th:onclick="|location.href='@{/}'|">닫기
-                        </button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">결제취소</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     </div>
-
+    <div th:replace="fragments/footer :: footer"/>
 </div> <!-- /container -->
 </body>
 

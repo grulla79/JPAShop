@@ -68,4 +68,14 @@ public class OrderController {
         return "order/orderList";
     }
 
+    @GetMapping("/myPage")
+    public String myPageList(@ModelAttribute("orderSearch")OrderSearch orderSearch,
+                            Model model){
+        List<Order> orders = orderService.findOrders(orderSearch);
+        model.addAttribute("orders", orders);
+        model.addAttribute("payment", paymentRepository.findAll());
+
+        return "myPage/myPageList";
+    }
+
 }
