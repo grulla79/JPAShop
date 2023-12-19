@@ -1,11 +1,8 @@
 package jpabook.jpashop.service;
 
 import jpabook.jpashop.domain.Category;
-import jpabook.jpashop.domain.Item.Item;
 import jpabook.jpashop.repository.CategoryRepository;
-import jpabook.jpashop.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -40,7 +37,6 @@ public class CategoryService {
         c.setId(id);
         c.setName(name);
     }
-
     @Transactional
     public void deleteCategory(Long id) {
         categoryRepository.deleteOne(id);

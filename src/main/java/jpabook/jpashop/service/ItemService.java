@@ -1,6 +1,6 @@
 package jpabook.jpashop.service;
 
-import jpabook.jpashop.domain.Item.Item;
+import jpabook.jpashop.domain.Item;
 import jpabook.jpashop.domain.Review;
 import jpabook.jpashop.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +25,10 @@ public class ItemService {
 
     public List<Item> findItems(){
         return itemRepository.findAll();
+    }
+
+    public List<Item> findItems(Item item){
+        return itemRepository.findAll(item);
     }
 
     public Item findOne(Long id){

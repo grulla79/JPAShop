@@ -4,7 +4,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jpabook.jpashop.domain.Address;
 import jpabook.jpashop.domain.Item.Book;
-import jpabook.jpashop.domain.Item.Item;
+import jpabook.jpashop.domain.Item;
 import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.domain.Order;
 import jpabook.jpashop.domain.OrderStatus;

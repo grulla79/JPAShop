@@ -4,21 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6b65ce6-c595-4c3f-96de-20178f31ea4e" name="Changes" comment="장바구니 추가">
-      <change afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/items/reviewForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/myPage/myPageList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9dc9876-c247-4cb4-8999-d11592af1cef.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9dc9876-c247-4cb4-8999-d11592af1cef.xml" afterDir="false" />
+    <list default="true" id="e6b65ce6-c595-4c3f-96de-20178f31ea4e" name="Changes" comment="상품리뷰 작성 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/controller/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/controller/ItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Item/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/domain/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/CategoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/ItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/OrderSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/OrderSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/PaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/repository/PaymentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/service/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/service/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpabook/jpashop/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/bodyHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/bodyHeader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/items/createItemForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/items/createItemForm.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/items/itemInfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/items/itemInfo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/items/itemList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/items/itemList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/orderList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/orderList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/members/createMemberForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/members/createMemberForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/myPage/myPageList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/myPage/myPageList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order/orderForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order/orderForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/jpabook/jpashop/service/OrderServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/jpabook/jpashop/service/OrderServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +253,7 @@
       <workItem from="1690444726094" duration="5851000" />
       <workItem from="1702666493998" duration="452000" />
       <workItem from="1702667277132" duration="357000" />
-      <workItem from="1702962401862" duration="36425000" />
+      <workItem from="1702962401862" duration="38688000" />
     </task>
     <task id="LOCAL-00001" summary="도메인 분석 설계 - 엔티티 클래스 개발 2">
       <created>1689538609724</created>
@@ -310,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703013277545</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="상품리뷰 작성 추가">
+      <option name="closed" value="true" />
+      <created>1703024937501</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1703024937501</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +341,8 @@
     <MESSAGE value="웹계층 개발 - 상품등록/상품조회 추가" />
     <MESSAGE value="웹계층 개발 마무리" />
     <MESSAGE value="장바구니 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="장바구니 추가" />
+    <MESSAGE value="상품리뷰 작성 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="상품리뷰 작성 추가" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
