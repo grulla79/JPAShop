@@ -35,12 +35,18 @@ public class ItemService {
      */
 
     @Transactional
-    public void updateItem(Long id, String name, int price, int stockQuantity)
+    public void updateItem(Long id, String name, int price, int stockQuantity, String category)
     {
         Item item = itemRepository.findOne(id);
         item.setName(name);
         item.setPrice(price);
         item.setStockQuantity(stockQuantity);
+        item.setCategory(category);
+    }
+
+    @Transactional
+    public void deleteItem(Long id){
+        itemRepository.deleteOne(id);
     }
 }
 

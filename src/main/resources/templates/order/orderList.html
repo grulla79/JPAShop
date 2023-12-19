@@ -1,6 +1,14 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head th:replace="fragments/header :: header"/>
+
+<head>
+    <link rel="stylesheet" href="./bootstrapt/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+
 <body>
 <div class="container">
     <div th:replace="fragments/bodyHeader :: bodyHeader"/>
@@ -53,10 +61,55 @@
             </tr>
             </tbody>
         </table>
+
+        <p><a href="#" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            상품 주문
+            &raquo;</a></p>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="text-align: center">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">결제창</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <a href="ko.qr-code-generator.com/" border="0" style="cursor:default" rel="nofollow">
+                            <img src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fwww.naver.com%2F&chs=180x180&choe=UTF-8&chld=L|2">
+                        </a>
+
+                        <div class="form-group">
+                            <label for="payment">  </label>
+                            <select name="payment" id="payment" class="form-control">
+                                <option value="">결제 방식 선택</option>
+                                <option th:each="pay : ${payment}"
+                                        th:value="${pay.id}"
+                                        th:text="${pay.payment}"/>
+                            </select>
+                        </div>
+
+                        <p><br>
+                            <b>결제를 완료하였으면 '닫기' 버튼을 눌러주십시오.</b>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+
+
+                        <button type="button" class="btn btn-secondary" th:onclick="|location.href='@{/main}'|">닫기
+                        </button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">결제취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div th:replace="fragments/footer :: footer"/>
 </div> <!-- /container -->
 </body>
+
+
 <script>
     function cancel(id) {
         var form = document.createElement("form");

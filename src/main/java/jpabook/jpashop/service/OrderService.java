@@ -19,16 +19,17 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final MemberRepository memberRepository;
     private final ItemRepository itemRepository;
+
     //주문
     @Transactional
-    public Long order(Long memberId, Long itemId, int count){
+    public Long order(Long memberId, Long itemId, int count) {
 
         //엔티티 조회
         Member member = memberRepository.findOne(memberId);
-        Item item =itemRepository.findOne(itemId);
+        Item item = itemRepository.findOne(itemId);
 
         //배송정보 생성
-        Delivery delivery  =new Delivery();
+        Delivery delivery = new Delivery();
         delivery.setAddress(member.getAddress());
         delivery.setStatus(DeliveryStatus.READY);
 
@@ -47,7 +48,7 @@ public class OrderService {
 
     //주문취소
     @Transactional
-    public void cancelOrder(Long orderId){
+    public void cancelOrder(Long orderId) {
         //주문 엔티티 조회후 취소
         Order order = orderRepository.findOne(orderId);
         order.cancel();
@@ -55,10 +56,9 @@ public class OrderService {
 
     //검색
 
-    public List<Order> findOrders(OrderSearch orderSearch){
+    public List<Order> findOrders(OrderSearch orderSearch) {
         return orderRepository.findAllByString(orderSearch);
     }
-
 
 
 }

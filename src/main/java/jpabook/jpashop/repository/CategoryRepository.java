@@ -10,30 +10,31 @@ import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
-public class ItemRepository {
+public class CategoryRepository {
 
     private final EntityManager em;
 
-    public void save(Item item){
-        if(item.getId() == null){
-            em.persist(item);
-        }else {
+    public void save(Category category) {
+        if (category.getId() == null) {
+            em.persist(category);
+        } else {
             //이미 아이템이 존재하는 경우, 아이템의 값을 수정
             //잘 사용하지 않는 방법
-            em.merge(item);
+            em.merge(category);
         }
     }
 
-    public Item findOne(Long id){
-        return em.find(Item.class, id);
+    public Category findOne(Long id) {
+        return em.find(Category.class, id);
     }
 
-    public List<Item> findAll(){
-        return em.createQuery("select i from  Item i", Item.class)
+    public List<Category> findAll() {
+        return em.createQuery("select c from  Category c", Category.class)
                 .getResultList();
     }
 
     public void deleteOne(Long id) {
-        em.remove(em.find(Item.class, id));
+
+        em.remove(em.find(Category.class, id));
     }
 }

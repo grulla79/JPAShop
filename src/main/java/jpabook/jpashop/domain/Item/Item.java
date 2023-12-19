@@ -14,7 +14,7 @@ import java.util.List;
 //상속 전략 - 한 테이블에 모두 저장
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "dtype")
-public abstract class Item {
+public class Item {
     @Id
     @GeneratedValue
     @Column(name = "item_id")
@@ -23,9 +23,8 @@ public abstract class Item {
     private String name;
     private int price;
     private int stockQuantity;
+    private String category;
 
-    @ManyToMany(mappedBy = "items")
-    private List<Category> categories = new ArrayList<>();
 
     //비지니스 로직 추가 - 재고수량 증가로직
     public void addStock(int quantity){

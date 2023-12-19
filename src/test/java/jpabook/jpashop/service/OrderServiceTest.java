@@ -35,7 +35,8 @@ public class OrderServiceTest {
     public void 상품주문() throws Exception {
         //Given
         Member member = createMember();
-        Item item = createBook("시골 JPA", 10000, 10); //이름, 가격, 재고
+        Item item = new Item();
+       //Item item = createBook("시골 JPA", 10000, 10); //이름, 가격, 재고
         int orderCount = 2;
         //When
         Long orderId = orderService.order(member.getId(), item.getId(),
@@ -55,7 +56,8 @@ public class OrderServiceTest {
     public void 상품주문_재고수량초과() throws Exception {
         //Given
         Member member = createMember();
-        Item item = createBook("시골 JPA", 10000, 10); //이름, 가격, 재고
+        Item item = new Item();
+        //Item item = createBook("시골 JPA", 10000, 10); //이름, 가격, 재고
         int orderCount = 11; //재고보다 많은 수량
         //When
         orderService.order(member.getId(), item.getId(), orderCount);
@@ -67,7 +69,8 @@ public class OrderServiceTest {
     public void 주문취소() {
         //Given
         Member member = createMember();
-        Item item = createBook("시골 JPA", 10000, 10); //이름, 가격, 재고
+        Item item = new Item();
+        //Item item = createBook("시골 JPA", 10000, 10); //이름, 가격, 재고
         int orderCount = 2;
 
         Long orderId = orderService.order(member.getId(), item.getId(),
