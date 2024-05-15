@@ -26,6 +26,13 @@ public class MemberController {
         return "members/createMemberForm";
     }
 
+    @GetMapping("/members/login")
+    public String Login(Model model){
+        //컨트롤러 -> 뷰로 넘어갈때 데이터를 담아 넘김
+        model.addAttribute("memberForm", new MemberForm());
+        return "members/loginForm";
+    }
+
     @PostMapping("/members/new")
     public String create(@Valid MemberForm form, BindingResult result){
         /**
